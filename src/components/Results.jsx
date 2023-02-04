@@ -1,11 +1,11 @@
+import Card from './Card';
+
 export default function ({ results }) {
   return (
-    <>
+    <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4">
       {results.map((item) => (
-        <div>
-          {item.original_title ? item.original_title : item.original_name}
-        </div>
+        <Card key={item.id} result={item} />
       ))}
-    </>
+    </div>
   );
 }
